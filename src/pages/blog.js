@@ -11,9 +11,7 @@ class SecondPage extends React.Component {
   }
 
   componentDidMount() {
-    // axios.get('https://api.trello.com/1/cards/5c51f4e868d8af5615ce8cc9?fields=all&attachments=false&attachment_fields=all&members=false&membersVoted=false&checkItemStates=false&checklists=none&checklist_fields=all&board=false&list=false&pluginData=false&stickers=false&sticker_fields=all&customFieldItems=false&key=f1915f180d732d7c303fbce8c7c484a6&token=17b407c3e06c56b0b9f16a316f91e60c38e386a075b84a54edef5fe0c216571c').then((res)=>{
-    //   console.log(res)
-    // })
+    axios.get('/.netlify/functions/trello')
   }
   render(){
   return(
