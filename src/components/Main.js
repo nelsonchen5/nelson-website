@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from "gatsby"
 
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
@@ -48,23 +49,25 @@ class Main extends React.Component {
           {close}
         </article>
 
-        <article
+        <a 
+          href= "#projects"
           id="work"
           className={`${this.props.article === 'work' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Projects</h2>
+          {/* <h2 className="major">Projects</h2>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
           <p>Insert Link to another page</p>
           <p>Link to Resume. Link to Github</p>
-          {close}
-        </article>
+          {close} */}
+          {/* <Link to="/projects/">Test</Link>  */}
+        </a>
 
-        <article
+        {/* <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
@@ -83,9 +86,10 @@ class Main extends React.Component {
             Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
             Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
             amet.
+            <a href = 'blog'>test</a>
           </p>
           {close}
-        </article>
+        </article> */}
 
         <article
           id="contact"

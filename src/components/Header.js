@@ -53,10 +53,7 @@ const Header = props => (
         </li>
         <li>
           <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('about')
-            }}
+            href="blog"
           >
             Blog
           </a>
