@@ -27,7 +27,3 @@ class SecondPage extends React.Component {
 }
 
 export default SecondPage
-
-const token = '17b407c3e06c56b0b9f16a316f91e60c38e386a075b84a54edef5fe0c216571c'
-const key = 'f1915f180d732d7c303fbce8c7c484a6'
-const secret = 'f894820edd6f18a79418988c23e138779f5ed7415862ed7006e4a11288c039f8'
