@@ -11,8 +11,9 @@ class SecondPage extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/.netlify/functions/trello').then(response => response.json())
-    .then(console.log)
+    axios.get('/.netlify/functions/trello').then((res)=>{
+      console.log(res)
+    })
   }
   render(){
   return(
