@@ -1,3 +1,4 @@
 [build]
   Functions = "./functions"
-  Command = "netlify-lambda build src/functions"
+  Command = "npm run build"
+  Publish = "public"
