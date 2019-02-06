@@ -22,7 +22,7 @@ exports.handler = function(event, context, callback) {
       // lists.concat(res)
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify(lists),
+        body: JSON.stringify(res),
     })
     // .then(
     //   lists.forEach(list => {
