@@ -8,18 +8,24 @@ import Layout from '../components/layout'
 class SecondPage extends React.Component {
   constructor() {
     super()
+    this.state ={
+      trelloData: {}
+    }
   }
 
   componentDidMount() {
     axios.get('/.netlify/functions/trello').then((res)=>{
-      console.log(res)
+      this.setState({trelloData:res})
     })
   }
   render(){
   return(
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
+    <h1>Blog</h1>
+    <p>Welcome to my blog</p>
+  {/*make a list of all cards sorted by date*/}
+  {/*make all cards clickable*/}
+  {/*onClick, make it link to a page with just blog post and comments*/}
     <Link to="/">Go back to the homepage</Link>
   </Layout>
   )
