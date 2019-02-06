@@ -19,11 +19,11 @@ exports.handler = function(event, context, callback) {
         process.env.TRELLO_KEY
       }&token=${process.env.TRELLO_TOKEN}`
     ).then(res => {
-      lists.concat(res.data)
+      lists.concat(res)
     }).then(
       lists.forEach(list => {
         axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
-          posts.concat(res.data)
+          posts.concat(res)
         })
       })
     ).then(
