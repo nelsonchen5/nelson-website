@@ -29,7 +29,7 @@ exports.handler = function(event, context, callback) {
     ).then(
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify(res),
+        body: JSON.stringify(posts),
       })
     )
     
