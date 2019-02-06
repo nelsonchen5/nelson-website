@@ -15,7 +15,16 @@ class SecondPage extends React.Component {
 
   componentDidMount() {
     axios.get('/.netlify/functions/trello').then((res)=>{
-      this.setState({trelloData:res})
+      // this.setState({trelloData:res})
+      console.log(res.data)
+    })
+  }
+
+  combineList = () =>{
+    //go through every "List", and combine the post into one list
+    let post = []
+    this.state.trelloData.lists.forEach((item)=>{
+      
     })
   }
   render(){
@@ -24,6 +33,7 @@ class SecondPage extends React.Component {
     <h1>Blog</h1>
     <p>Welcome to my blog</p>
   {/*make a list of all cards sorted by date*/}
+  
   {/*make all cards clickable*/}
   {/*onClick, make it link to a page with just blog post and comments*/}
     <Link to="/">Go back to the homepage</Link>

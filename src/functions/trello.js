@@ -22,7 +22,7 @@ exports.handler = function(event, context, callback) {
     .then(res => {
       res.data.forEach(list => {
         axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
-          posts.concat(res)
+          posts.concat(res.data)
         })
       })
       callback(null, {
