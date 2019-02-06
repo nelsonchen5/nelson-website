@@ -25,9 +25,9 @@ exports.handler = function(event, context, callback) {
           posts.concat(res.data)
         })
       })
-      callback(null, {
-        statusCode: 200,
-        body: posts,
-      })
     })
+        callback(null, {
+          statusCode: 200,
+          body: posts,
+        })
 }
