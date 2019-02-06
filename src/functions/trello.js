@@ -14,25 +14,24 @@ exports.handler = function(event, context, callback) {
   //   })
   let lists = []
   let posts = []
-  axios
-    .get(
+  axios.get(
       `https://api.trello.com/1/boards/5c5a2ea0938885015e71bf17/lists?cards=none&card_fields=all&filter=open&fields=all&key=${
         process.env.TRELLO_KEY
       }&token=${process.env.TRELLO_TOKEN}`
-    )
-    .then(res => {
+    ).then(res => {
       lists.concat(res.data)
- 
-    })
-    
-    lists.data.forEach(list => {
-      axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
-        posts.concat(res.data)
+    }).then(
+      lists.data.forEach(list => {
+        axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
+          posts.concat(res.data)
+        })
       })
-    })
-    callback(null, {
-      statusCode: 200,
-      body: JSON.stringify(res),
-    })
+    ).then(
+      callback(null, {
+        statusCode: 200,
+        body: JSON.stringify(res),
+      })
+    )
+    
 }
 
