@@ -12,6 +12,7 @@ exports.handler = function(event, context, callback) {
   //       body: res.data,
   //     })
   //   })
+  let lists = []
   let posts = []
   axios
     .get(
@@ -20,14 +21,18 @@ exports.handler = function(event, context, callback) {
       }&token=${process.env.TRELLO_TOKEN}`
     )
     .then(res => {
-      res.data.forEach(list => {
-        axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
-          posts.concat(res.data)
-        })
-      })
-      callback(null, {
-        statusCode: 200,
-        body: JSON.stringify(res),
+      lists.concat(res.data)
+ 
+    })
+    
+    lists.data.forEach(list => {
+      axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
+        posts.concat(res.data)
       })
     })
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify(res),
+    })
 }
+
