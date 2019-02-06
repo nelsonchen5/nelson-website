@@ -15,9 +15,7 @@ exports.handler = function(event, context, callback) {
   let lists = []
   let posts = []
   axios.get(
-      `https://api.trello.com/1/boards/5c5a2ea0938885015e71bf17/lists?cards=none&card_fields=all&filter=open&fields=all&key=${
-        process.env.TRELLO_KEY
-      }&token=${process.env.TRELLO_TOKEN}`
+      `https://api.trello.com/1/boards/5c5a2ea0938885015e71bf17/cards/?key=${process.env.TRELLO_KEY}&token=${process.env.TRELLO_TOKEN}`
     ).then(res => {
       // lists.concat(res)
       callback(null, {
