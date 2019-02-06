@@ -29,9 +29,10 @@ class SecondPage extends React.Component {
     <p>Welcome to my blog</p>
   {/*make a list of all cards sorted by date*/}
   {this.state.trelloData.map((item)=>(
-    <h1> {item.name}
+    <div>
+    <h1> {item.name}</h1>
     <p> {item.desc}</p>
-    </h1>
+    </div>
   ))}
   {/*make all cards clickable*/}
   {/*onClick, make it link to a page with just blog post and comments*/}
