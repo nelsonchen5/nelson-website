@@ -19,20 +19,23 @@ exports.handler = function(event, context, callback) {
         process.env.TRELLO_KEY
       }&token=${process.env.TRELLO_TOKEN}`
     ).then(res => {
-      lists.concat(res)
-    }).then(
-      lists.forEach(list => {
-        axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
-          posts.concat(res)
-          
-        })
-      })
-    ).then(
+      // lists.concat(res)
       callback(null, {
         statusCode: 200,
         body: JSON.stringify(lists),
-      })
-    )
+    })
+    .then(
+    //   lists.forEach(list => {
+    //     axios.get(`https://api.trello.com/1/lists/${list}/cards`).then(res => {
+    //       posts.concat(res)  
+    //     })
+    //   })
+    // ).then(
+    //   callback(null, {
+    //     statusCode: 200,
+    //     body: JSON.stringify(lists),
+    //   })
+    // )
     
 }
 
