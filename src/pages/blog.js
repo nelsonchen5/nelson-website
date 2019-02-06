@@ -9,7 +9,7 @@ class SecondPage extends React.Component {
   constructor() {
     super()
     this.state ={
-      trelloData: {}
+      trelloData: []
     }
   }
 
