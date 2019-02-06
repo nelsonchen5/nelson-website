@@ -16,7 +16,7 @@ class SecondPage extends React.Component {
   componentDidMount() {
     axios.get('/.netlify/functions/trello').then((res)=>{
       // this.setState({trelloData:res})
-      console.log(res.data)
+      console.log(res)
     })
   }
 
