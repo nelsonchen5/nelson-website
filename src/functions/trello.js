@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
     .then( (res) => { 
       callback(null, {
         statusCode: 200,
-        body: {msg:'nothing'},
+        body: JSON.stringify({msg:'nothing'}),
       })
     })
 }
