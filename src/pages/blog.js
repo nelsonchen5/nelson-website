@@ -15,10 +15,10 @@ class SecondPage extends React.Component {
 
   componentDidMount() {
     axios.get('/.netlify/functions/trello').then((res)=>{
-      const sortedData = res.data.sort((a, b)=>{
-        return new Date(b.date) - new Date(a.date);
-      })
-      this.setState({trelloData:sortedData})
+      // const sortedData = res.data.sort((a, b)=>{
+      //   return new Date(b.date) - new Date(a.date);
+      // })
+      this.setState({trelloData:res.data})
     })
   }
 
