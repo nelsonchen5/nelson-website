@@ -25,7 +25,7 @@ class SecondPage extends React.Component {
       }
     })
     console.log(this.props)
-    
+    this.sortData()
   }
 
   sortData = () => {
