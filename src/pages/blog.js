@@ -9,7 +9,7 @@ class SecondPage extends React.Component {
     super()
     this.state = {
       trelloData: [],
-      published: []
+      sortedData: []
     }
   }
 
