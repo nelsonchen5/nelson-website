@@ -18,6 +18,7 @@ class SecondPage extends React.Component {
       if (typeof res.data === 'array') {
         console.log(res)
         this.setState({ trelloData: res.data })
+        this.sortData()
       } else {
         this.setState({ trelloData: dummyBlogs })
         this.sortData()
