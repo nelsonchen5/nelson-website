@@ -1,44 +1,109 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import axios from 'axios'
-
+import dummyBlogs from '../components/dummyBlogs'
 import Layout from '../components/layout'
-
 
 class SecondPage extends React.Component {
   constructor() {
     super()
-    this.state ={
-      trelloData: []
+    this.state = {
+      trelloData: [],
+      published: []
     }
   }
 
   componentDidMount() {
-    axios.get('/.netlify/functions/trello').then((res)=>{
-      // const sortedData = res.data.sort((a, b)=>{
-      //   return new Date(b.date) - new Date(a.date);
-      // })
-      this.setState({trelloData:res.data})
+    axios.get('/.netlify/functions/trello').then(res => {
+      if (typeof res.data === 'array') {
+        console.log(res)
+        this.setState({ trelloData: res.data })
+      } else {
+        this.setState({ trelloData: dummyBlogs })
+        this.sortData()
+      }
     })
+    console.log(this.props)
+    
   }
 
-  render(){
-  return(
-  <Layout>
-    <h1>Blog</h1>
-    <p>Welcome to my blog</p>
-  {/*make a list of all cards sorted by date*/}
-  {this.state.trelloData.map((item)=>(
-    <div>
-    <h1> {item.name}</h1>
-    <p> {item.desc}</p>
-    </div>
-  ))}
-  {/*make all cards clickable*/}
-  {/*onClick, make it link to a page with just blog post and comments*/}
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-  )
+  sortData = () => {
+    const sortedData = this.state.trelloData.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date)
+    })
+
+    const published = this.state.trelloData.filter((item)=>{
+      return (item.labels.length > 0 && item.labels[0].name ==='Published')
+    })
+  
+    this.setState({sortedData: published})
+  }
+
+  render() {
+    return (
+      <div>
+        <div>
+          <h1 id="header">Blog</h1>
+          <p style={{ textAlign: 'center' }}>Welcome to my blog</p>
+        </div>
+        {/*make a list of all cards sorted by date*/}
+        {this.state.sortedData.map(item => (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              paddingRight: 400,
+              paddingLeft: 400
+            }}
+          >
+                <div 
+                style={{
+   
+            }} >
+                <Link
+                  to="/blogpost"
+                  style={{
+                    fontSize: 40,
+                    textAlign: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignSelf: 'flex-start',
+                  }}
+                >
+                  {' '}
+                  {item.name}{' '}
+                </Link>
+            <img
+              style={{
+                borderRadius: 4,
+                padding: 5,
+                width: '70%',
+                display: 'flex',
+                marginRight: 50,
+                flexGrow: 0,
+                flexShrink: 0,
+                margin: 'auto'
+              }}
+              src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+            />
+              <p
+                style={{
+                  fontSize: 15,
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                {' '}
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+        {/*make all cards clickable*/}
+        {/*onClick, make it link to a page with just blog post and comments*/}
+        <Link to="/">Go back to the homepage</Link>
+      </div>
+    )
   }
 }
 
