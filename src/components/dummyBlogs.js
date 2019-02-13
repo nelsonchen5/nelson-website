@@ -3,7 +3,7 @@ const dummyBlogs = [
         "id": "5c5a2ed88317613f88075820",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-10T08:42:39.676Z",
+        "dateLastActivity": "2019-02-10T20:38:31.468Z",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare nulla mi, et rhoncus metus lobortis consectetur. Donec lobortis dolor eu lorem maximus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam a ornare eros, ac hendrerit elit. Morbi et arcu sed nunc elementum feugiat cursus molestie massa. Ut commodo lorem et nulla hendrerit porta. Nulla vitae turpis a lectus lacinia suscipit. Duis bibendum augue quis pretium molestie. Proin vel quam lobortis, efficitur leo vel, tristique nulla. Praesent et dignissim est, vel mollis ligula. Suspendisse maximus sit amet tellus dictum varius. Fusce ut dolor id diam dignissim congue eu dapibus orci. Morbi ante eros, lacinia eget tortor eu, rhoncus faucibus nisl. Nullam sed tincidunt enim. Suspendisse eget mi nisi. Aliquam in convallis mi.",
         "descData": {
             "emoji": {}
@@ -13,9 +13,7 @@ const dummyBlogs = [
         "idMembersVoted": [],
         "idShort": 1,
         "idAttachmentCover": "5c5b3742bfd7b32cf7955324",
-        "idLabels": [
-            "5c5a2ea091d0c2ddc53e5cd0"
-        ],
+        "idLabels": [],
         "manualCoverAttachment": false,
         "name": "First Post!",
         "pos": 65535.5,
@@ -44,14 +42,7 @@ const dummyBlogs = [
         "due": null,
         "idChecklists": [],
         "idMembers": [],
-        "labels": [
-            {
-                "id": "5c5a2ea091d0c2ddc53e5cd0",
-                "idBoard": "5c5a2ea0938885015e71bf17",
-                "name": "Published",
-                "color": "green"
-            }
-        ],
+        "labels": [],
         "shortUrl": "https://trello.com/c/di5gXZXl",
         "subscribed": false,
         "url": "https://trello.com/c/di5gXZXl/1-first-post"
@@ -108,7 +99,7 @@ const dummyBlogs = [
         "id": "5c5a4336e6815e8f44450386",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-10T08:41:44.557Z",
+        "dateLastActivity": "2019-02-12T01:00:53.815Z",
         "desc": "first toy problem desc",
         "descData": {
             "emoji": {}
@@ -118,9 +109,7 @@ const dummyBlogs = [
         "idMembersVoted": [],
         "idShort": 3,
         "idAttachmentCover": null,
-        "idLabels": [
-            "5c5a2ea091d0c2ddc53e5cd0"
-        ],
+        "idLabels": [],
         "manualCoverAttachment": false,
         "name": "first toy",
         "pos": 65535,
@@ -149,14 +138,7 @@ const dummyBlogs = [
         "due": null,
         "idChecklists": [],
         "idMembers": [],
-        "labels": [
-            {
-                "id": "5c5a2ea091d0c2ddc53e5cd0",
-                "idBoard": "5c5a2ea0938885015e71bf17",
-                "name": "Published",
-                "color": "green"
-            }
-        ],
+        "labels": [],
         "shortUrl": "https://trello.com/c/y0lItMdk",
         "subscribed": false,
         "url": "https://trello.com/c/y0lItMdk/3-first-toy"
@@ -165,7 +147,7 @@ const dummyBlogs = [
         "id": "5c5a433c04a55337372b27fa",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-10T08:42:04.598Z",
+        "dateLastActivity": "2019-02-11T05:03:24.480Z",
         "desc": "second toy desc",
         "descData": {
             "emoji": {}
@@ -175,9 +157,7 @@ const dummyBlogs = [
         "idMembersVoted": [],
         "idShort": 4,
         "idAttachmentCover": null,
-        "idLabels": [
-            "5c5a2ea091d0c2ddc53e5cd0"
-        ],
+        "idLabels": [],
         "manualCoverAttachment": false,
         "name": "second toy!",
         "pos": 131071,
@@ -206,14 +186,7 @@ const dummyBlogs = [
         "due": null,
         "idChecklists": [],
         "idMembers": [],
-        "labels": [
-            {
-                "id": "5c5a2ea091d0c2ddc53e5cd0",
-                "idBoard": "5c5a2ea0938885015e71bf17",
-                "name": "Published",
-                "color": "green"
-            }
-        ],
+        "labels": [],
         "shortUrl": "https://trello.com/c/vF78645u",
         "subscribed": false,
         "url": "https://trello.com/c/vF78645u/4-second-toy"
@@ -222,7 +195,7 @@ const dummyBlogs = [
         "id": "5c5a433f4d269705b382d169",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-06T19:47:33.657Z",
+        "dateLastActivity": "2019-02-12T01:00:47.754Z",
         "desc": "#learning desc 1\n##h2\n###h3\nimage:\n![alt text](https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 \"Logo Title Text 1\")",
         "descData": {
             "emoji": {}
@@ -232,7 +205,9 @@ const dummyBlogs = [
         "idMembersVoted": [],
         "idShort": 5,
         "idAttachmentCover": null,
-        "idLabels": [],
+        "idLabels": [
+            "5c5a2ea091d0c2ddc53e5cd0"
+        ],
         "manualCoverAttachment": false,
         "name": "first learning",
         "pos": 65535,
@@ -261,7 +236,14 @@ const dummyBlogs = [
         "due": null,
         "idChecklists": [],
         "idMembers": [],
-        "labels": [],
+        "labels": [
+            {
+                "id": "5c5a2ea091d0c2ddc53e5cd0",
+                "idBoard": "5c5a2ea0938885015e71bf17",
+                "name": "Published",
+                "color": "green"
+            }
+        ],
         "shortUrl": "https://trello.com/c/5lv3e9C5",
         "subscribed": false,
         "url": "https://trello.com/c/5lv3e9C5/5-first-learning"

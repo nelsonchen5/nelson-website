@@ -3,7 +3,9 @@ import { Link } from 'gatsby'
 import axios from 'axios'
 import dummyBlogs from '../components/dummyBlogs'
 import Layout from '../components/layout'
+import showdown from 'showdown'
 
+const converter = new showdown.Converter()
 class SecondPage extends React.Component {
   constructor() {
     super()
@@ -24,8 +26,6 @@ class SecondPage extends React.Component {
         this.sortData()
       }
     })
-    console.log(this.props)
-    this.sortData()
   }
 
   sortData = () => {
@@ -40,6 +40,12 @@ class SecondPage extends React.Component {
     this.setState({sortedData: published})
   }
 
+  convertMarkdown = () =>{
+    let convertedData = this.state.sortedData.map((item)=>{
+      item.desc = converter.makeHtml(item.desc)
+    })
+    this.setState({sortedData:convertedData})
+  }
   render() {
     return (
       <div>
@@ -95,8 +101,7 @@ class SecondPage extends React.Component {
                 }}
               >
                 {' '}
-                {item.desc}
-              </p>
+                {item.desc} </p>
             </div>
           </div>
         ))}
