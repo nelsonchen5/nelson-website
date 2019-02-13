@@ -19,8 +19,7 @@ class SecondPage extends React.Component {
     axios.get('/.netlify/functions/trello').then(res => {
         console.log(res)
         this.setState({ trelloData: res.data })
-        this.sortData()
-      
+        this.sortData()   
     })
   }
 
@@ -76,7 +75,7 @@ class SecondPage extends React.Component {
                   {' '}
                   {item.name}{' '}
                 </Link>
-            <img
+            {/* <img
               style={{
                 borderRadius: 4,
                 padding: 5,
@@ -88,7 +87,7 @@ class SecondPage extends React.Component {
                 margin: 'auto'
               }}
               src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-            />
+            /> */}
               <p
                 style={{
                   fontSize: 15,
