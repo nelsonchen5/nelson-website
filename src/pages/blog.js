@@ -93,7 +93,6 @@ class SecondPage extends React.Component {
                   fontSize: 15,
                   display: 'flex',
                   flexDirection: 'column',
-                  textAlign: 'center'
                 }}
               >
                 {' '}
