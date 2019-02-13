@@ -195,8 +195,8 @@ const dummyBlogs = [
         "id": "5c5a433f4d269705b382d169",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-12T01:00:47.754Z",
-        "desc": "#learning desc 1\n##h2\n###h3\nimage:\n![alt text](https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 \"Logo Title Text 1\")",
+        "dateLastActivity": "2019-02-13T05:11:27.257Z",
+        "desc": "#learning desc 1\n##h2\n###h3\n",
         "descData": {
             "emoji": {}
         },
@@ -205,9 +205,7 @@ const dummyBlogs = [
         "idMembersVoted": [],
         "idShort": 5,
         "idAttachmentCover": null,
-        "idLabels": [
-            "5c5a2ea091d0c2ddc53e5cd0"
-        ],
+        "idLabels": [],
         "manualCoverAttachment": false,
         "name": "first learning",
         "pos": 65535,
@@ -236,14 +234,7 @@ const dummyBlogs = [
         "due": null,
         "idChecklists": [],
         "idMembers": [],
-        "labels": [
-            {
-                "id": "5c5a2ea091d0c2ddc53e5cd0",
-                "idBoard": "5c5a2ea0938885015e71bf17",
-                "name": "Published",
-                "color": "green"
-            }
-        ],
+        "labels": [],
         "shortUrl": "https://trello.com/c/5lv3e9C5",
         "subscribed": false,
         "url": "https://trello.com/c/5lv3e9C5/5-first-learning"
@@ -438,15 +429,19 @@ const dummyBlogs = [
         "id": "5c5f367f89813e73784ab070",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-09T20:22:23.777Z",
-        "desc": "",
-        "descData": null,
+        "dateLastActivity": "2019-02-13T05:23:33.481Z",
+        "desc": "### Commit:\n- snapshot of state\n\n### Merge: \n- adding the commits from another branch to your branch\n\n### Rebase:\n- move commits on current branch on top of another branch",
+        "descData": {
+            "emoji": {}
+        },
         "idBoard": "5c5a2ea0938885015e71bf17",
         "idList": "5c5a2ea0938885015e71bf1a",
         "idMembersVoted": [],
         "idShort": 10,
         "idAttachmentCover": null,
-        "idLabels": [],
+        "idLabels": [
+            "5c5a2ea091d0c2ddc53e5cd0"
+        ],
         "manualCoverAttachment": false,
         "name": "Git Branching",
         "pos": 393215,
@@ -461,13 +456,13 @@ const dummyBlogs = [
             "location": false,
             "votes": 0,
             "viewingMemberVoted": false,
-            "subscribed": false,
+            "subscribed": true,
             "fogbugz": "",
             "checkItems": 0,
             "checkItemsChecked": 0,
-            "comments": 0,
+            "comments": 2,
             "attachments": 0,
-            "description": false,
+            "description": true,
             "due": null,
             "dueComplete": false
         },
@@ -475,9 +470,16 @@ const dummyBlogs = [
         "due": null,
         "idChecklists": [],
         "idMembers": [],
-        "labels": [],
+        "labels": [
+            {
+                "id": "5c5a2ea091d0c2ddc53e5cd0",
+                "idBoard": "5c5a2ea0938885015e71bf17",
+                "name": "Published",
+                "color": "green"
+            }
+        ],
         "shortUrl": "https://trello.com/c/OjustN8f",
-        "subscribed": false,
+        "subscribed": true,
         "url": "https://trello.com/c/OjustN8f/10-git-branching"
     }
 ]

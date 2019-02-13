@@ -3,9 +3,8 @@ import { Link } from 'gatsby'
 import axios from 'axios'
 import dummyBlogs from '../components/dummyBlogs'
 import Layout from '../components/layout'
-import showdown from 'showdown'
+import ReactMarkdown from 'react-markdown'
 
-const converter = new showdown.Converter()
 class SecondPage extends React.Component {
   constructor() {
     super()
@@ -13,6 +12,7 @@ class SecondPage extends React.Component {
       trelloData: [],
       sortedData: []
     }
+
   }
 
   componentDidMount() {
@@ -24,6 +24,7 @@ class SecondPage extends React.Component {
       } else {
         this.setState({ trelloData: dummyBlogs })
         this.sortData()
+        console.log(this.state.trelloData)
       }
     })
   }
@@ -41,10 +42,10 @@ class SecondPage extends React.Component {
   }
 
   convertMarkdown = () =>{
-    let convertedData = this.state.sortedData.map((item)=>{
-      item.desc = converter.makeHtml(item.desc)
-    })
-    this.setState({sortedData:convertedData})
+    // let convertedData = this.state.sortedData.map((item)=>{
+    //   item.desc = converter.makeHtml(item.desc)
+    // })
+    // this.setState({sortedData:convertedData})
   }
   render() {
     return (
@@ -101,7 +102,7 @@ class SecondPage extends React.Component {
                 }}
               >
                 {' '}
-                {item.desc} </p>
+                <ReactMarkdown source={item.desc}/> </p>
             </div>
           </div>
         ))}
