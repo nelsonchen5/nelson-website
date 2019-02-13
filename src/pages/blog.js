@@ -20,7 +20,9 @@ class SecondPage extends React.Component {
         console.log(res)
         this.setState({ trelloData: res.data })
         this.sortData()
+      
     })
+  }
 
   sortData = () => {
     const sortedData = this.state.trelloData.sort((a, b) => {
