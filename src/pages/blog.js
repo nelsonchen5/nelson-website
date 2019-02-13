@@ -96,7 +96,7 @@ class SecondPage extends React.Component {
                 }}
               >
                 {' '}
-                <ReactMarkdown source={item.desc}/> </p>
+                <ReactMarkdown source={item.desc} escapeHtml/> </p>
             </div>
           </div>
         ))}
