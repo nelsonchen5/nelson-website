@@ -4,6 +4,7 @@ import axios from 'axios'
 import dummyBlogs from '../components/dummyBlogs'
 import Layout from '../components/layout'
 import ReactMarkdown from 'react-markdown'
+import htmlParser from 'react-markdown/plugins/html-parser'
 
 class SecondPage extends React.Component {
   constructor() {
@@ -96,7 +97,7 @@ class SecondPage extends React.Component {
                 }}
               >
                 {' '}
-                <ReactMarkdown source={item.desc} escapeHtml/> </p>
+                <ReactMarkdown source={item.desc} escapeHtml={false}/> </p>
             </div>
           </div>
         ))}
