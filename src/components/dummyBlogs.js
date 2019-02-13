@@ -429,8 +429,8 @@ const dummyBlogs = [
         "id": "5c5f367f89813e73784ab070",
         "checkItemStates": null,
         "closed": false,
-        "dateLastActivity": "2019-02-13T05:23:33.481Z",
-        "desc": "### Commit:\n- snapshot of state\n\n### Merge: \n- adding the commits from another branch to your branch\n\n### Rebase:\n- move commits on current branch on top of another branch",
+        "dateLastActivity": "2019-02-13T05:30:29.698Z",
+        "desc": "## Learning this week\nThis week I've started making more merge requests to my project at work and am starting to collaborate more with my senior dev. I don't have too much experience with collaborating on coding projects so my experience with git is rather basic. I was recommended by him to use https://learngitbranching.js.org, so I'll list my notes and takeways below:\n\n### Commit:\n- snapshot of state\n\n### Merge: \n- adding the commits from another branch to your branch\n\n### Rebase:\n- move commits on current branch on top of another branch",
         "descData": {
             "emoji": {}
         },

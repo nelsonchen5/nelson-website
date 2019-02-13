@@ -17,17 +17,10 @@ class SecondPage extends React.Component {
 
   componentDidMount() {
     axios.get('/.netlify/functions/trello').then(res => {
-      if (typeof res.data === 'array') {
         console.log(res)
         this.setState({ trelloData: res.data })
         this.sortData()
-      } else {
-        this.setState({ trelloData: dummyBlogs })
-        this.sortData()
-        console.log(this.state.trelloData)
-      }
     })
-  }
 
   sortData = () => {
     const sortedData = this.state.trelloData.sort((a, b) => {
