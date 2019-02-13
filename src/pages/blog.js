@@ -4,7 +4,7 @@ import axios from 'axios'
 import dummyBlogs from '../components/dummyBlogs'
 import Layout from '../components/layout'
 import ReactMarkdown from 'react-markdown'
-import htmlParser from 'react-markdown/plugins/html-parser'
+import htmlParser from 'react-markdown/with-html'
 
 class SecondPage extends React.Component {
   constructor() {
