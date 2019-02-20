@@ -55,8 +55,9 @@ class SecondPage extends React.Component {
             style={{
               display: 'flex',
               alignItems: 'center',
-              paddingRight: 400,
-              paddingLeft: 400
+              justifyContent: 'center',
+              width: '50%',
+              margin: 'auto'
             }}
           >
                 <div 
@@ -72,23 +73,12 @@ class SecondPage extends React.Component {
                     flexDirection: 'column',
                     alignSelf: 'flex-start',
                   }}
+                  name={item.name}
+                  desc={item.desc}
                 >
                   {' '}
                   {item.name}{' '}
                 </Link>
-            {/* <img
-              style={{
-                borderRadius: 4,
-                padding: 5,
-                width: '70%',
-                display: 'flex',
-                marginRight: 50,
-                flexGrow: 0,
-                flexShrink: 0,
-                margin: 'auto'
-              }}
-              src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-            /> */}
               <p
                 style={{
                   fontSize: 15,
