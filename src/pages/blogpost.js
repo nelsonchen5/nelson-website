@@ -32,7 +32,7 @@ const BlogPost = (props) => (
             display: 'flex',
             flexDirection: 'column',
             flexDirection: 'column',
-            width: '90%',
+            width: '80%',
             margin: 'auto'
           }}
         >
