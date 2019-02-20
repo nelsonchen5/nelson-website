@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import ReactMarkdown from 'react-markdown'
 
-const BlogPost = () => (
+const BlogPost = (props) => (
   <Layout>
     <div
       style={{
@@ -24,27 +24,20 @@ const BlogPost = () => (
             alignSelf: 'flex-start',
           }}
         >
-          TEST PAGE
+          {props.location.state.name}
         </h1>
         <p
           style={{
             fontSize: 15,
             display: 'flex',
             flexDirection: 'column',
+            flexDirection: 'column',
+            width: '90%',
+            margin: 'auto'
           }}
         >
-          {/* <ReactMarkdown source={this.props.desc} escapeHtml={false} /> */}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla
-          eros, finibus in lacinia at, volutpat id diam. Nam augue quam, maximus
-          a tellus in, faucibus tempor arcu. Maecenas ut ante imperdiet,
-          lobortis nibh non, placerat magna. Sed vel nibh malesuada, hendrerit
-          mi sed, congue lacus. Suspendisse tempor arcu nunc, ac sodales leo
-          fringilla quis. Mauris lacinia imperdiet eros, non posuere enim
-          egestas eget. Donec imperdiet rutrum felis, ac porttitor mauris
-          eleifend nec. In id quam sed est feugiat tempus sit amet ac ligula.
-          Donec aliquam orci et lectus tempor, et porta quam elementum. Nulla
-          feugiat velit et malesuada bibendum. Sed vitae velit sit amet dolor
-          interdum efficitur.
+          <ReactMarkdown source={props.location.state.desc} escapeHtml={false} />
+
         </p>
       </div>
     </div>

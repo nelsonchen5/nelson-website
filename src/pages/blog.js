@@ -19,7 +19,7 @@ class SecondPage extends React.Component {
   componentDidMount() {
     axios.get('/.netlify/functions/trello').then(res => {
         console.log(res)
-        this.setState({ trelloData: res.data })
+        this.setState({ trelloData: dummyBlogs })
         this.sortData()   
     })
   }
@@ -65,7 +65,7 @@ class SecondPage extends React.Component {
    
             }} >
                 <Link
-                  to="/blogpost"
+                  to={`/blogpost/`}
                   style={{
                     fontSize: 40,
                     textAlign: 'center',
@@ -73,8 +73,10 @@ class SecondPage extends React.Component {
                     flexDirection: 'column',
                     alignSelf: 'flex-start',
                   }}
-                  name={item.name}
-                  desc={item.desc}
+                  state={{
+                    name: item.name,
+                    desc: item.desc
+                  }}
                 >
                   {' '}
                   {item.name}{' '}
