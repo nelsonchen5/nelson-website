@@ -36,7 +36,7 @@ const BlogPost = (props) => (
             margin: 'auto'
           }}
         >
-          <ReactMarkdown source={props.location.state.desc} escapeHtml={false} />
+          <ReactMarkdown source={props.location.state? props.location.state.desc:null} escapeHtml={false} />
 
         </p>
       </div>
