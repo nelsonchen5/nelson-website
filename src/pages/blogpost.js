@@ -24,7 +24,7 @@ const BlogPost = (props) => (
             alignSelf: 'flex-start',
           }}
         >
-          {props.location.state.name}
+          {props.location.state.name ? props.location.state.name : null}
         </h1>
         <p
           style={{

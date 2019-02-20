@@ -36,12 +36,6 @@ class SecondPage extends React.Component {
     this.setState({sortedData: published})
   }
 
-  convertMarkdown = () =>{
-    // let convertedData = this.state.sortedData.map((item)=>{
-    //   item.desc = converter.makeHtml(item.desc)
-    // })
-    // this.setState({sortedData:convertedData})
-  }
   render() {
     return (
       <div>
