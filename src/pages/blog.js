@@ -84,7 +84,7 @@ class SecondPage extends React.Component {
                   fontSize: 15,
                   display: 'flex',
                   flexDirection: 'column',
-                  width: '70%',
+                  width: '90%',
                   margin: 'auto'
                 }}
               >
